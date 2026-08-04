@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calhas Açotek | Quem Somos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ESTILOS ESPECÍFICOS DA PÁGINA SOBRE NÓS */
+        .about-content .image img {
+            width: 100%;
+            height: auto; 
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* LAYOUT HÍBRIDO - PASSO A PASSO TÉCNICO */
+        .logistics-hybrid-section {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid #FE5000;
+        }
+
+        .hybrid-top-row {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #A3A7A8;
+            padding-bottom: 40px;
+        }
+
+        .hybrid-intro h2 { color: #FE5000; margin-bottom: 15px; font-size: 1.8rem; text-transform: uppercase; }
+        .hybrid-intro p { font-size: 1.1rem; color: #141517; line-height: 1.6; }
+
+        .hybrid-image-box {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .hybrid-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hybrid-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .hybrid-step-card {
+            background: #F0F0F1;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+            border: 1px solid #A3A7A8;
+        }
+        .hybrid-step-card:hover { transform: translateY(-5px); background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-color: #FE5000; }
+
+        .step-header-hybrid { display: flex; align-items: center; margin-bottom: 15px; }
+        .step-badge {
+            background: #FE5000; color: white; font-weight: 800; 
+            width: 35px; height: 35px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; margin-right: 10px;
+        }
+        .hybrid-step-card h3 { font-size: 1.1rem; color: #2A3B44; margin-bottom: 10px; text-transform: uppercase; }
+        .hybrid-step-card p { font-size: 0.95rem; color: #141517; line-height: 1.5; }
+
+        @media (max-width: 900px) {
+            .hybrid-top-row { grid-template-columns: 1fr; display: flex; flex-direction: column-reverse; }
+            .hybrid-steps-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo-img">
+            <img src="imagens/logo.png" alt="Calhas Açotek">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html" class="active">Sobre Nós</a></li>
+            <li><a href="servicos.html">Produtos & Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="#" id="open-work" class="trabalhe-btn">Orçamento Rápido</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Atendimento Açotek</h3>
+            <span class="close-btn">&times;</span>
+        </div>
+        <div class="sidebar-content-center">
+            <p class="invite-text">Precisa de um orçamento rápido para sua obra?<br>Fale diretamente com nossa equipe:</p>
+            <a href="mailto:contato@calhasacotek.com.br" class="email-highlight-card">
+                <span class="big-icon">📧</span>
+                <span class="email-label">E-mail Comercial</span>
+                <span class="email-value">contato@acotekcalhas.com</span>
+                <span class="click-hint">(Clique para enviar e-mail)</span>
+            </a>
+            <div class="secondary-contact">
+                <p>Ou chame no WhatsApp:</p>
+                <a href="https://wa.me/5511947288415?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+um+or%C3%A7amento." target="_blank" class="whatsapp-link">📱 (11) 94728-8415</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <section class="page-header">
+        <h1>Quem Somos</h1>
+        <p>Agilidade, precisão e compromisso absoluto com a proteção da sua estrutura.</p>
+    </section>
+
+    <!-- HISTÓRIA E PROPOSTA DE VALOR -->
+    <section class="container section-padding">
+        <div class="about-content">
+            <div class="text">
+                <h2>Nossa Proposta de Valor</h2>
+                <p>A <strong>Calhas Açotek</strong> A 25 anos no mercado, com o propósito de oferecer soluções definitivas para captação e escoamento de águas pluviais, unindo tecnologia de corte/dobra com instalação técnica altamente especializada de até 6 metros.</p>
+                <br>
+                <p>Atendemos desde residências a grandes galpões industriais. Nossa equipe acompanha todas as etapas: desde a <strong>medição técnica no local</strong> até o acabamento e vedação final no telhado, eliminando infiltrações, goteiras e bolor.</p>
+                <br>
+                <p>Trabalhamos exclusivamente com matérias-primas de alta durabilidade, como aço galvanizado, garantindo o <strong>melhor custo-benefício</strong> e vida útil prolongada para seu investimento, com garantia de até 2 anos</p>
+                <br>
+                <h3>Equipe Técnica e Segurança</h3>
+                <p>O diferencial da Açotek está no rigor operacional. Nossos calheiros e instaladores são treinados para trabalhar com segurança em altura, utilizando equipamentos de proteção adequados e materiais de selagem de alta performance.</p>
+            </div>
+            <div class="image">
+                <img src="imagens/galpao-calhas.jpeg" alt="Fabricação de Calhas Açotek">
+            </div>
+        </div>
+    </section>
+
+    <!-- IDENTIDADE CORPORATIVA (TIMELINE) -->
+    <section class="mixed-timeline-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Nossa Identidade Corporativa</h2>
+            <div class="mixed-container">
+                <div class="mixed-line"></div>
+                <div class="mixed-item">
+                    <div class="mixed-icon"></div>
+                    <div class="mixed-content">
+                        <h3>🚀Missão</h3>
+                        <p>Fabricar e instalar calhas, rufos e sistemas de exaustão com altíssima qualidade e pontualidade, protegendo patrimônios contra os danos da água de chuva.</p>
+                    </div>
+                </div>
+                <div class="mixed-item">
+                    <div class="mixed-icon"></div>
+                    <div class="mixed-content">
+                        <h3>👁️Visão</h3>
+                        <p>Ser reconhecida como a serralharia de funilaria de referência em agilidade, durabilidade e excelência de acabamento em toda a região.</p>
+                    </div>
+                </div>
+                <div class="mixed-item">
+                    <div class="mixed-icon"></div>
+                    <div class="mixed-content">
+                        <h3>💎Valores</h3>
+                        <p>Transparência com o cliente, rigor na fabricação, segurança do instalador e compromisso inegociável com os prazos combinados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ETAPAS DO PROCESSO TÉCNICO -->
+    <section class="clean-logistics-section section-padding">
+        <div class="container">
+            <div class="logistics-hybrid-section">
+                
+                <div class="hybrid-top-row">
+                    <div class="hybrid-intro">
+                        <h2>Do Projeto à Instalação Sem Complicação</h2>
+                        <p>Nosso processo de atendimento foi estruturado para garantir que cada calha e rufo encaixe com perfeição no seu imóvel, sem desperdício de material ou retrabalho.</p>
+                    </div>
+                    <div class="hybrid-image-box">
+                    </div>
+                </div>
+
+                <div class="hybrid-steps-grid">
+                    <div class="hybrid-step-card">
+                        <div class="step-header-hybrid">
+                            <span class="step-badge">1</span>
+                            <h3>Medição Técnica</h3>
+                        </div>
+                        <p>Avaliamos a vazão de água, tipo de telha e caimento para definir o perfil exato das calhas e condutores.</p>
+                    </div>
+
+                    <div class="hybrid-step-card">
+                        <div class="step-header-hybrid">
+                            <span class="step-badge">2</span>
+                            <h3>Dobra Sob Medida</h3>
+                        </div>
+                        <p>Fabricação própria com dobradeiras industriais, garantindo peças longas e com o mínimo de emendas possíveis.</p>
+                    </div>
+
+                    <div class="hybrid-step-card">
+                        <div class="step-header-hybrid">
+                            <span class="step-badge">3</span>
+                            <h3>Fixação e Vedação</h3>
+                        </div>
+                        <p>Instalação com suportes reforçados e vedação química de alta resistência ao sol e variações de temperatura.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MARCAS PARCEIRAS / MATÉRIA-PRIMA -->
+    <section class="clients-section">
+        <div class="container">
+            <h2 class="section-title">Qualidade na Matéria-Prima</h2>
+            <div class="clients-grid">
+                <div class="client-logo"><h3 style="font-size: 1.1rem; color: #2A3B44;">Aço Galvanizado</h3></div>
+                <div class="client-logo"><h3 style="font-size: 1.1rem; color: #2A3B44;">Selantes PU40</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELO INSTITUCIONAL -->
+    <section class="corporate-seal-section section-padding">
+        <div class="container seal-container">
+            <div class="seal-title">
+                <h2>Garantia de Origem</h2>
+                <p>Serralharia e funilaria industrial devidamente estruturada.</p>
+            </div>
+            <div class="seal-grid">
+                <div class="seal-item"><h4>Razão Social</h4><p>Calhas Açotek Ltda</p></div>
+                <div class="seal-item"><h4>Especialidade</h4><p>Funilaria & Calhas Industriais</p></div>
+                <div class="seal-item"><h4>Atendimento</h4><p>Residencial, Comercial e Industrial</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 Calhas Açotek. Todos os direitos reservados. Agilidade e qualidade sempre!</p>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP -->
+    <a href="https://wa.me/5511947288415?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+um+or%C3%A7amento." class="whatsapp-float" target="_blank">
+        <svg class="whatsapp-icon" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.6 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
