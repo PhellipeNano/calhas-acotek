@@ -14,10 +14,22 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* Impede o vazamento lateral */
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F0F0F1;
+    color: #141517;
+    line-height: 1.6;
+    padding-top: 100px;
 }
 
 body {
@@ -66,13 +78,15 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #141517; /* Fundo escuro para a logo destacar perfeitamente */
+    background-color: #141517;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     color: #F0F0F1;
     padding: 0 5%;
     height: 100px;
-    position: sticky;
+    position: fixed; /* Mudei de sticky para fixed */
     top: 0;
+    left: 0;         /* Adicionado */
+    width: 100%;     /* Adicionado */
     z-index: 1000;
 }
 
