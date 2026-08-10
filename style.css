@@ -8,10 +8,16 @@
    - Preto Profundo: #141517
    ========================================================================== */
 
-* {
+* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Impede o vazamento lateral */
 }
 
 body {
@@ -19,9 +25,12 @@ body {
     background-color: #F0F0F1;
     color: #141517;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
 /* --- TEXTOS JUSTIFICADOS --- */
 p, li {
     text-align: justify;
@@ -692,4 +701,24 @@ footer {
         width: 26px !important; 
         height: 26px !important; 
     }
+    
+    /* --- CORREÇÃO DE VAZAMENTO NO MOBILE --- */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    input, select, textarea, .form-control {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    p, h1, h2, h3, h4, span {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
 }
